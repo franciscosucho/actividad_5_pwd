@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario LNR - Campeonato de Robótica</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="contenedor">
+        <header>
+            <h1>Expo Técnica</h1>
+            <h2>Formulario de Registro para la Expo Técnica 2025</h2>
+        </header>
+        
+        <form id="formularioRegistro" method="post" action="/registrar">
+            <section class="seccion-datos">
+                <h3>Datos personales</h3>
+                
+                <div class="campo">
+                    <label for="nombreEstudiante">Nombre del estudiante*</label>
+                    <input type="text" id="nombreEstudiante" name="nombreEstudiante" maxlength="30" required>
+                    <span class="mensaje-error" id="errornombreEstudiante"></span>
+                </div>
+                <div class="campo">
+                    <label for="apellidoEstudiante">Apellido del estudiante*</label>
+                    <input type="text" id="apellidoEstudiante" name="apellidoEstudiante" maxlength="30" required>
+                    <span class="mensaje-error" id="errorapellidoEstudiante"></span>
+                </div>
+                <div class="campo">
+                    <label for="año">Año actual*</label>
+                    <select id="año" name="año" required>
+                        <option value="">Seleccione un año</option>
+                        <option value="1">1 año</option>
+                        <option value="2">2 año</option>
+                        <option value="3">3 año</option>
+                        <option value="4">4 año</option>
+                        <option value="5">5 año</option>
+                        <option value="6">6 año</option>
+                        <option value="7">7 año</option>
+                    </select>
+                </div>
+                <div class="campo">
+                    <label for="carrera">Carrera*</label>
+                    <select id="carrera" name="carrera" required>
+                        <option value="">Seleccione una Carrera</option>
+                        <option value="programacion">Programacion</option>
+                        <option value="electronica">electronica</option>
+                        
+                    </select>
+                </div>
+                <div class="campo">
+                    <label for="emailPersonal">Email personal *</label>
+                    <input type="email" id="emailPersonal" name="emailPersonal" required>
+                    <span class="mensaje-error" id="erroremailPersonal"></span>
+                </div>
+                
+                
+            </section>
+            
+          
+            
+            <section class="seccion-datos">
+                <h3>Datos del proyecto a exponer</h3>
+                
+                <div class="campo">
+                    <label for="nombreProyecto">Nombre del proyecto *</label>
+                    <input type="text" id="nombreProyecto" name="nombreProyecto" maxlength="60" required>
+                    <span class="mensaje-error" id="errornombreProyecto"></span>
+                </div>
+                <div class="campo">
+                    <label for="docenteACargo">Nombre completo del docente a cargo del proyecto*</label>
+                    <input type="text" id="docenteACargo" name="docenteACargo" maxlength="60" required>
+                    <span class="mensaje-error" id="errordocenteACargo"></span>
+                </div>
+                <div class="campo">
+                    <label for="area">Area del proyecto*</label>
+                    <select id="area" name="area" required>
+                        <option value="">Seleccione un area</option>
+                        <option value="sociales">Sociales</option>
+                        <option value="comunicaciones">Comunicaciones</option>
+                        <option value="edu_fisica">Educacion fisica</option>
+                        <option value="exactas_naturales">Exactas y naturales</option>
+                        <option value="taller">Taller</option>
+                    </select>
+                </div>
+                
+            </section>
+            
+         
+            <section class="seccion-terminos">
+                <div class="campo-checkbox">
+                    <input type="checkbox" id="aceptoReglas" name="aceptoReglas" required class="checkbox-reglas">
+                    <label for="aceptoReglas">Acepto los terminos de la Expotecnica *</label>
+                </div>
+                <span class="mensaje-error" id="errorReglas"></span>
+            </section>
+            
+            <div class="botones">
+                <button type="submit" id="registrarEquipo" class="boton-enviar" disabled>
+                    <i class="fas fa-robot"></i> Registrar proyecto
+                </button>
+            </div>
+            
+        </form>
+        
+        <footer>
+            <p>EEST N°1 "Eduardo Ader" Vicente López - 7° 2° - 2025</p>
+        </footer>
+    </div>
+    
+    <script src="index.js"></script>
+</body>
+</html>
